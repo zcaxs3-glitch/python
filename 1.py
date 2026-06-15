@@ -43,7 +43,7 @@ def TestDeltaSGD_cached():
     W = 2 * np.random.random((1, 3)) - 1
     W_list = [[], [], []]
 
-    # 10,000번 돌며 '숫자 데이터'만 리스트에 수집 (여기선 그래프 안 그림!)
+    # 10,000번 돌며 '숫자 데이터'만 리스트에 수집
     for _epoch in range(10000):
         W = DeltaSGD(W, X, D)
         W_list[0].append(W[0][0])
@@ -64,7 +64,7 @@ if st.button("🚀 코드 작동 시작"):
         # [캐시 작동] 최초 1회만 10,000번 연산하고, 이후부턴 0초 만에 데이터만 쏙 빼옴
         W_list = TestDeltaSGD_cached()
 
-        # 🎨 그래프 그리기는 캐시 밖에서 '딱 1번만' 실행! (1만 번 돌던 거 꺼냄)
+        # 🎨 그래프 그리기는 캐시 밖에서 딱 1번만 실행!
         fig, ax = plt.subplots(1, 1)
         fig.subplots_adjust(hspace=0.4)
 
@@ -79,5 +79,5 @@ if st.button("🚀 코드 작동 시작"):
         st.success("실행 완료!")
         st.pyplot(fig)
 
-        # 🧹 메모리 청소 (무료 서버 폭발 방지)
+        # 🧹 메모리 청소
         plt.close(fig)
