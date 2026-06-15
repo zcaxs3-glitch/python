@@ -1,4 +1,3 @@
-Plaintext
-
+numpy
 streamlit
 matplotlib
