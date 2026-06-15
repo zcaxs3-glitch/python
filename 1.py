@@ -80,6 +80,6 @@ if st.button("🚀 코드 작동 시작"):
         if __name__ == '__main__':
             W_lis = TestDeltaSGD_cached()
             st.success("실행 완료!")
-            st.pyplot(plt)
+            st.pyplot(W_lis)
             plt.close('all')
             
