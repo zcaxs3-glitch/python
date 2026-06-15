@@ -81,4 +81,5 @@ if st.button("🚀 코드 작동 시작"):
             TestDeltaSGD()
             st.success("실행 완료!")
             st.pyplot(plt)
+            plt.close('all')
             
