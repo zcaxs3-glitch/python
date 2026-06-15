@@ -35,7 +35,7 @@ if st.button("🚀 코드 작동 시작"):
         
             return W
 
-        def TestDeltaSGD():
+        def TestDeltaSGD_cached():
             X = np.array([[0, 0, 1],
                           [0, 1, 1],
                           [1, 0, 1],
@@ -78,7 +78,7 @@ if st.button("🚀 코드 작동 시작"):
 
 
         if __name__ == '__main__':
-            TestDeltaSGD()
+            W_lis = TestDeltaSGD_cached()
             st.success("실행 완료!")
             st.pyplot(plt)
             plt.close('all')
