@@ -1,6 +1,4 @@
 import numpy as np
-from Sigmoid import *
-from DeltaSGD import *
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import streamlit as st
