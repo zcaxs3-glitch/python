@@ -34,7 +34,7 @@ if st.button("🚀 코드 작동 시작"):
                 W[0][2] = W[0][2] + dW[2]
         
             return W
-
+        @st.cache_data
         def TestDeltaSGD_cached():
             X = np.array([[0, 0, 1],
                           [0, 1, 1],
